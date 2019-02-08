@@ -1,15 +1,18 @@
 # raspberryStart
 
-This is a program for a raspberry pi connected to a scrollphathd led screen. Once powered up and connected to the internet, it will show the SSID and IP of the connected network on the Scroll phat hd so you can easily connect to it via for example SSH.
+This is a program for a raspberry pi connected to a scrollphathd led screen. Once powered up and connected to the internet, it will show the SSID and IP of the connected network on the Scroll phat hd so you can easily connect to it via for example SSH. Just make sure you call this script via either crontab or as a system service at startup.
 
-Just make sure you call this script via either crontab or as a system service at startup.
+Prereqs:
+-python 2 or 3
+-scrollphathd
 
-This last can be done by creating a service file with:
+
+Starting the python script via a service:
 ```
 sudo nano /etc/systemd/system/YOUR_SERVICE_NAME.service
 ```
 
-In this file:
+In this file type:
 ```
 Wants=network.target
 After=syslog.target network-online.target
