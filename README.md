@@ -5,7 +5,9 @@ This is a program for a raspberry pi connected to a scrollphathd led screen. Onc
 Just make sure you call this script via either crontab or as a system service at startup.
 
 This last can be done by creating a service file with:
-```sudo nano /etc/systemd/system/YOUR_SERVICE_NAME.service```
+```
+sudo nano /etc/systemd/system/YOUR_SERVICE_NAME.service
+```
 
 In this file:
 ```
@@ -26,12 +28,18 @@ WantedBy=multi-user.target
 ```
 
 After saving reload the deamon service: 
-```sudo systemctl daemon-reload```
+```
+sudo systemctl daemon-reload
+```
 
 Enable your service:
-```sudo systemctl enable YOUR_SERVICE_NAME```
+```
+sudo systemctl enable YOUR_SERVICE_NAME
+```
 
 Start your service:
-```sudo systemctl start YOUR_SERVICE_NAME```
+```
+sudo systemctl start YOUR_SERVICE_NAME
+```
 
 Reboot the device and it should work!
