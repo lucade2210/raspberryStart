@@ -4,16 +4,7 @@ This is a program for a raspberry pi connected to a scrollphathd led screen. Onc
 
 Just make sure you call this script via either crontab or as a system service at startup.
 
-This last can be done by creating a shell file with:
-```sudo nano ~/startup.sh```
-in which you enter:
-```
-#!/bin/sh
-sleep 5
-sudo python startup.py
-```
-
-Then create a service file with:
+This last can be done by creating a service file with:
 ```sudo nano /etc/systemd/system/YOUR_SERVICE_NAME.service```
 
 In this file:
@@ -25,7 +16,7 @@ After=syslog.target network-online.target
 
 [Service]
 Type=simple
-ExecStart=/bin/bash /home/YOUR_USERNAME/startup.sh <<--path to the shell script
+ExecStart=/usr/bin/python /home/YOUR_USERNAME/startup.sh <<--path to the python script
 Restart=on-failure
 RestartSec=10
 KillMode=process
