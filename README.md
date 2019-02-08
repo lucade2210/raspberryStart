@@ -18,7 +18,7 @@ After=syslog.target network-online.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python /home/YOUR_USERNAME/startup.sh <<--path to the python script
+ExecStart=/usr/bin/python /home/YOUR_USERNAME/startup.py <<--or whatever path to the python script
 Restart=on-failure
 RestartSec=10
 KillMode=process
