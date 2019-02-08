@@ -5,8 +5,8 @@ This is a program for a raspberry pi connected to a scrollphathd led screen. Onc
 Prereqs:
 
 python v2 or v3
-
 scrollphathd
+
 
 
 Starting the python script via a service:
