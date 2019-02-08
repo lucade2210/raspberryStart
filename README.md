@@ -11,8 +11,6 @@ sudo nano /etc/systemd/system/YOUR_SERVICE_NAME.service
 
 In this file:
 ```
-Description=GIVE_YOUR_SERVICE_A_DESCRIPTION
-
 Wants=network.target
 After=syslog.target network-online.target
 
