@@ -9,7 +9,7 @@ This last can be done by creating a shell file with:
 in which you enter:
 ```
 #!/bin/sh
-sleep 
+sleep 5
 sudo python startup.py
 ```
 
