@@ -25,7 +25,7 @@ After=syslog.target network-online.target
 
 [Service]
 Type=simple
-ExecStart=/home/YOUR_USERNAME/startup.sh <<--path to the shell script
+ExecStart=/bin/bash /home/YOUR_USERNAME/startup.sh <<--path to the shell script
 Restart=on-failure
 RestartSec=10
 KillMode=process
@@ -39,5 +39,8 @@ After saving reload the deamon service:
 
 Enable your service:
 ```sudo systemctl enable YOUR_SERVICE_NAME```
+
+Start your service:
+```sudo systemctl start YOUR_SERVICE_NAME```
 
 Reboot the device and it should work!
